@@ -8,9 +8,11 @@
             List of all friends
           </div>
           @forelse ($friends as $friend)
-              <div class="panel-block">
-                {{ $friend->name }}
-              </div>
+             
+              <a href="{{ route('chat.show', $friend->id) }}" class="panel-block">
+                  {{ $friend->name }}
+                </a>
+              
           @empty
               <div class="panel-block">
                 You don't have any friends. So Sad :(
